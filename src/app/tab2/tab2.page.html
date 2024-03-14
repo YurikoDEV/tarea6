@@ -1,17 +1,42 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Pronostico del clima
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
-</ion-content>
+  <div class="main-container">
+    <div class="clima-info">
+      <div class="icon">
+        <ion-icon name="sunny"></ion-icon>
+        <span class="grados">81°</span>
+      </div>
+      <span class="location-content">
+        <span>El millon</span>
+      </span>
+      <span class="fecha">13/3/2024</span>
+      <small>3:27 PM</small>
+    </div>
+  </div>
+
+</ion-content> -->
+
+
+<div class="weather-container" [ngClass]="{'day-background': isDaylight, 'night-background': !isDaylight}">
+  <div class="weather-info">
+    <div class="weather-image">
+      <ion-icon *ngIf="!isDaylight" name="sunny"></ion-icon>
+      <ion-icon *ngIf="isDaylight" name="moon"></ion-icon>
+    </div>
+    <div class="clima-info">
+      <div class="icon">
+        <span class="grados">{{temperature}}°</span>
+      </div>
+      <span class="location-content">Santo Domingo, Republica Dominicana</span><br>
+      <span class="fecha">{{time}}</span>
+    </div>
+  </div>
+</div>

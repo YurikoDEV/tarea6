@@ -1,17 +1,36 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+    CAJA DE HERRAMIENTAS
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="main-container">
+    <ion-icon name="hammer" class="toolIcon"></ion-icon>
+
+    <div class="item-container">
+
+      <div class="item" (click)="goToP1()">
+        <ion-icon name="code-outline"></ion-icon>
+        <span>Genero por nombre</span>
+      </div>
+      <div class="item" (click)="goToP2()">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <span>Determinar edad</span>
+      </div>
+      <div class="item" (click)="goToP3()">
+        <ion-icon name="globe-outline"></ion-icon>
+        <span>universidades</span>
+      </div>
+      <div class="item" (click)="goToAbout()">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <span>Acerca de</span>
+      </div>
+
+    </div>
+  </div>
+
 </ion-content>

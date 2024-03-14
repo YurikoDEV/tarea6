@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +9,23 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(private router: Router) {}
+
+
+  goToP1(){
+    this.router.navigate(['../tabs/p1']);
+  }
+
+  goToP2(){
+    this.router.navigate(['../tabs/p2']);
+  }
+
+  goToP3(){
+    this.router.navigate(['../tabs/p3']);
+  }
+  
+  goToAbout(){
+    this.router.navigate(['../tabs/about']);
+  }
 
 }

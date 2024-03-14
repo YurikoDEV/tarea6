@@ -1,0 +1,32 @@
+
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0 0 0;
+
+    .title{
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .yourAge{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px 0 0 0;
+
+        .ageTitle{
+            font-size: 1.3em;
+        }
+
+        .age{
+            font-size: 1.6em;
+            font-weight: 600;
+        }
+    }
+}

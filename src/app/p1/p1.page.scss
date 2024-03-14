@@ -1,0 +1,53 @@
+
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0 0 0;
+
+    .title{
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .gender{
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .img-gender{
+            width: 150px;
+            height: 150px;
+            margin: 15px;
+            padding: 15px;
+        }
+
+        .woman{
+            color: pink;
+        }
+
+        .man{
+            color: #463bf2;
+        }
+
+        .active-man{
+            border: 1px solid #463bf2;
+            border-radius: 5px;
+            background-color: #463bf210;
+        }
+
+        .active-woman{
+            border: 1px solid pink;
+            border-radius: 5px;
+            background-color: #f23b7210;
+        }
+    }
+
+    .deco{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+}

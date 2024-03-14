@@ -1,0 +1,25 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-icon name="arrow-back-outline" slot="start" size="large" (click)="goBack()"></ion-icon>
+    <ion-title>Predecir Genero</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main-container">
+    <span class="title">¿Quieres que adivine tu genero?</span>
+      <ion-item>
+        <ion-input labelPlacement="floating" [(ngModel)]="name" placeholder="Ingresa tu nombre"></ion-input>
+        <ion-button (click)="getGenderInfo()" expand="full">ADIVINA</ion-button>
+
+      </ion-item>
+
+    <div class="gender">
+      <ion-icon *ngIf="gender == 'female'" class="img-gender woman active-woman"  name="woman-outline"></ion-icon>
+      <ion-icon *ngIf="gender == 'male'" class="img-gender man active-man" name="man-outline"></ion-icon> 
+      <ion-label>{{probability}}%</ion-label>
+    </div>
+
+    <img class="deco" src="\assets\witch.png" width="50%" alt="bruja">
+  </div>
+</ion-content>

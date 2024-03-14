@@ -1,0 +1,107 @@
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .clima-info{
+        margin: 20px 0 0 0;
+        padding: 10px;
+        // border: 1px solid #f00000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 5px;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+
+        .icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            color: #FDB813;
+
+            ion-icon{
+                font-size: 5em;
+            }
+
+            .grados{
+                font-size: 2em;
+            }
+        }
+
+        .location-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            ion-icon{
+                font-size: 1.3em;
+            }
+
+            span{
+                font-size: 1.3em;
+            }
+
+        }
+
+        .fecha{
+            font-size: 1.2em;
+        }
+
+        small{
+            color: #bfbfbf;
+        }
+    }
+}
+
+.weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #bfbfbf !important;
+}
+
+.weather-info {
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.weather-image {
+    text-align: center;
+    font-size: 2rem;
+}
+.weather-image img {
+    max-width: 100px;
+}
+
+.weather-details {
+    margin-top: 20px;
+}
+
+.weather-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.weather-details p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.day-background {
+    background: linear-gradient(to bottom, #336699, #003366); /* Azul marino */
+    color: black;
+}
+
+.night-background {
+    background: linear-gradient(to bottom, #FFA500, #FFFF00); /* Naranja-amarillo */
+    color: #bfbfbf;
+}

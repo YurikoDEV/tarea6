@@ -1,0 +1,27 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-icon name="arrow-back-outline" slot="start" size="large" (click)="goBack()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main-container">
+    <span class="title">¿Quieres que adivine tu edad?</span>
+    <ion-list>
+        <ion-item>
+          <ion-input labelPlacement="floating" [(ngModel)]="name" placeholder="Ingresa tu nombre"></ion-input>
+        </ion-item>      
+        <ion-button (click)="getAgeInfo()" expand="full">Determinar edad</ion-button>
+    </ion-list>
+
+    <div *ngIf="age != 0" style="margin-top: 50px;" class="yourAge">
+      <span class="ageTitle">Tu edad es:</span>
+      <span class="age">{{age}} años</span>
+    </div>
+
+    <img class="persona" *ngIf="persona == 'joven'" src="\assets\young.png" width="50%" alt="joven">
+    <img class="persona" *ngIf="persona == 'adulto'"src="\assets\adults.jpg" width="50%" alt="adulto">
+    <img class="persona" *ngIf="persona == 'anciano'"src="\assets\old.jpg" width="50%" alt="anciano">
+
+  </div>
+</ion-content>

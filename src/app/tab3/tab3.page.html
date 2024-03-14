@@ -1,17 +1,23 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="false">
   <ion-toolbar>
     <ion-title>
-      Tab 3
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<div class="main-container">
+  <span class="title">Asheville bee charmer</span>
+  <span class="subtitle">PURE • RAW • DELICIOUS  </span>
+
+  <img src="assets/honey-wall.jpg">
+</div>
+
+<div *ngFor="let article of articles" class="article">
+  <h2>{{ article.title }}</h2>
+  <p>{{ article.summary }}</p>
+  <ion-button color="warning"><a href="{{ article.link }}" target="_blank" class="visit-link">Visitar</a></ion-button>
+</div>
+
 </ion-content>

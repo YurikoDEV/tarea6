@@ -1,0 +1,37 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-icon name="arrow-back-outline" slot="start" size="large" (click)="goBack()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main-container">
+    <span class="title">Buscar universidades por paìs</span>
+    <ion-list class="search">
+      <ion-item >
+        <ion-input [(ngModel)]="country" label="Nombre del pais" labelPlacement="floating" placeholder="Ingresa el nombre del pais en ingles"></ion-input>
+        <ion-button (click)="searchUniversities()" expand="full">Buscar</ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <ion-searchbar *ngIf="universities && universities.length > 0" (ionChange)="ionSearchUniversities($event.detail.value ?? '')" placeholder="Buscar universidades"></ion-searchbar>
+  <div class="college-list">
+    <ion-card *ngFor="let university of universities">
+      <ion-card-header style="padding-bottom: 0px;">
+        <ion-card-title>{{ university.name }}</ion-card-title>
+        <ion-card-subtitle>{{ university.country }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-button fill="clear" >Visitar</ion-button>
+    </ion-card>
+  </div>
+
+  <ion-item *ngIf="universities && universities.length === 0">
+    <ion-label>No se encontraron universidades</ion-label>
+  </ion-item>
+
+  <div class="loading-container" *ngIf="isLoading">
+    <ion-spinner class="loading-spinner"></ion-spinner>
+  </div>
+
+</ion-content>
