@@ -1,0 +1,7 @@
+{
+  "name": "tarea66",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
